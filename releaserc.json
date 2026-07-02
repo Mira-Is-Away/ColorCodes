@@ -1,0 +1,35 @@
+{
+  "branches": ["main", {"name": "dev", "prerelease": "beta"}],
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    [
+      "@google/semantic-release-replace-plugin",
+      {
+        "replacements": [
+          {
+            "files": ["CMakeLists.txt"],
+            "from": "project\\(mira_colorcodes_lib VERSION [0-9]+\\.[0-9]+\\.[0-9]+",
+            "to": "project(mira_colorcodes_lib VERSION ${nextRelease.version}",
+            "results": [
+              {
+                "file": "CMakeLists.txt",
+                "hasChanged": true,
+                "numMatches": 1,
+                "numReplacements": 1
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    [
+      "@semantic-release/git",
+      {
+        "assets": ["CMakeLists.txt"],
+        "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+      }
+    ],
+    "@semantic-release/github"
+  ]
+}
