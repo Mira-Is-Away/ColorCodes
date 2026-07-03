@@ -1,5 +1,5 @@
-#ifndef COLORCODES_H_
-#define COLORCODES_H_ 
+#ifndef MIRA_COLORCODES_H_
+#define MIRA_COLORCODES_H_ 
 
 //RESET
 
@@ -82,6 +82,4 @@
 #define CCHIBG_CYAN   "\e[0;106m"
 #define CCHIBG_WHITE  "\e[0;107m"
 
-//
-
-#endif
+#endif // MIRA_COLORCODES_H_
