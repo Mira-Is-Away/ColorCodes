@@ -9,16 +9,8 @@
         "replacements": [
           {
             "files": ["CMakeLists.txt"],
-            "from": "project\\(mira_colorcodes_lib VERSION [0-9]+\\.[0-9]+\\.[0-9]+",
-            "to": "project(mira_colorcodes_lib VERSION ${nextRelease.version}",
-            "results": [
-              {
-                "file": "CMakeLists.txt",
-                "hasChanged": true,
-                "numMatches": 1,
-                "numReplacements": 1
-              }
-            ]
+            "from": "project\\(mira_colorcodes_lib VERSION [^ ]+",
+            "to": "project(mira_colorcodes_lib VERSION ${nextRelease.version}"
           }
         ]
       }
