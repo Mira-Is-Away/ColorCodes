@@ -3,7 +3,7 @@
 
 //RESET
 
-#define CLEARCOLOR "\e[0m"
+#define CC_CLEARCOLOR "\e[0m"
 
 //REGULAR COLORS - CC
 
