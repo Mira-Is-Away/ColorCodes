@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.22)
-project(mira_colorcodes_lib VERSION 1.0.0-beta.1 LANGUAGES C)
+project(mira_colorcodes_lib LANGUAGES C)
+
+set(MIRA_COLORCODES_VERSION "1.0.0")
 
 add_library(mira_colorcodes_lib INTERFACE)
 
