@@ -1,5 +1,11 @@
 {
-  "branches": ["main", {"name": "dev", "prerelease": "beta"}],
+  "branches": [
+    "main",
+    {
+      "name": "dev",
+      "prerelease": "beta"
+    }
+  ],
   "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
@@ -8,9 +14,9 @@
       {
         "replacements": [
           {
-            "files": ["CMakeLists.txt"],
-            "from": "project\\(mira_colorcodes_lib VERSION [^ ]+",
-            "to": "project(mira_colorcodes_lib VERSION ${nextRelease.version}"
+            "files": [ "CMakeLists.txt" ],
+            "from": "set\\(MIRA_COLORCODES_VERSION \"[^\\\"]+\"\\)",
+            "to": "set(MIRA_COLORCODES_VERSION \"${nextRelease.version}\")"
           }
         ]
       }
@@ -18,7 +24,7 @@
     [
       "@semantic-release/git",
       {
-        "assets": ["CMakeLists.txt"],
+        "assets": [ "CMakeLists.txt" ],
         "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
       }
     ],
