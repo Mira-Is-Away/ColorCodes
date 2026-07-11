@@ -1,0 +1,7 @@
+# Global Project Owner (in case a file has no explicit owner)
+* @Itsoeddie
+
+#File-specific owners
+include/mira/colorcodes.h @Itsoeddie
+CMakeLists.txt @henryisaway @Itsoeddie
+releaserc.json @henryisaway @Itsoeddie
